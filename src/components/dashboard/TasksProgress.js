@@ -12,7 +12,7 @@ import InsertChartIcon from '@material-ui/icons/InsertChartOutlined';
 
 const TasksProgress = (props) => (
   <Card
-    sx={{ height: '100%' }}
+  sx={{ height: '100%', borderRadius:3, boxShadow:12 }}
     {...props}
   >
     <CardContent>

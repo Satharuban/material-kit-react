@@ -19,11 +19,11 @@ const TrafficByDevice = (props) => {
   const data = {
     datasets: [
       {
-        data: [63, 15, 22],
+        data: [53, 15, 20,12],
         backgroundColor: [
-          colors.indigo[500],
-          colors.red[600],
-          colors.orange[600]
+          "#008FFB",
+          "#00E396",
+          colors.orange[600],"#FF4560"
         ],
         borderWidth: 8,
         borderColor: colors.common.white,
@@ -57,28 +57,33 @@ const TrafficByDevice = (props) => {
 
   const devices = [
     {
-      title: 'Desktop',
-      value: 63,
+      title: 'Child Care',
+      value: 53,
       icon: LaptopMacIcon,
-      color: colors.indigo[500]
+      color: "#008FFB"
     },
     {
-      title: 'Tablet',
+      title: 'Senior Care',
       value: 15,
       icon: TabletIcon,
-      color: colors.red[600]
+      color:"#00E396"
     },
     {
-      title: 'Mobile',
-      value: 23,
+      title: 'Special Needs',
+      value: 20,
       icon: PhoneIcon,
       color: colors.orange[600]
+    }, {
+      title: 'Transport',
+      value: 12,
+      icon: PhoneIcon,
+      color: "#FF4560"
     }
   ];
 
   return (
-    <Card {...props}>
-      <CardHeader title="Traffic by Device" />
+    <Card {...props} sx={{borderRadius:3, boxShadow:12 }}>
+      <CardHeader title="Earning Percentage" />
       <Divider />
       <CardContent>
         <Box
@@ -100,7 +105,7 @@ const TrafficByDevice = (props) => {
           }}
         >
           {devices.map(({
-            color,
+            color:color,
             icon: Icon,
             title,
             value
@@ -112,15 +117,16 @@ const TrafficByDevice = (props) => {
                 textAlign: 'center'
               }}
             >
-              <Icon color="action" />
+              {/* <Icon color="action" /> */}
               <Typography
                 color="textPrimary"
-                variant="body1"
+                variant="body1" noWrap={false}  style={{height:45}}
               >
                 {title}
               </Typography>
               <Typography
                 style={{ color }}
+              
                 variant="h2"
               >
                 {value}

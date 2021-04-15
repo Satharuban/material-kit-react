@@ -9,7 +9,7 @@ import { indigo } from '@material-ui/core/colors';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 
 const TotalProfit = (props) => (
-  <Card {...props}>
+  <Card  sx={{ height: '100%', borderRadius:3, boxShadow:12 }} {...props}>
     <CardContent>
       <Grid
         container

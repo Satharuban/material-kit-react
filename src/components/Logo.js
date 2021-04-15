@@ -1,7 +1,8 @@
 const Logo = (props) => (
   <img
     alt="Logo"
-    src="/static/logo.svg"
+    src="https://mtempz.com/assets/img/logo.png"
+    width="100"
     {...props}
   />
 );

@@ -39,7 +39,7 @@ const NavItem = ({
           textTransform: 'none',
           width: '100%',
           ...(active && {
-            color: 'primary.main'
+            color:"#ffff",backgroundColor:"#2196f3",borderRadius:5
           }),
           '& svg': {
             mr: 1
